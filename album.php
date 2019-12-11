@@ -1,5 +1,8 @@
 <htmL>
   <body>
+      <form action="index.html">
+  <h1><input type="submit" value="Home"></h1>
+</form>
   <?php 
       $key = $_POST['key'];
       // header('Content-type: albums/jpeg');
@@ -9,7 +12,7 @@
         $image = $files[$i];
         
         // print $image ."<br />";
-        echo "<img src='".$image ."' alt='Random&nbsp;' width='200' height='100'>";
+        echo "<img src='".$image ."' alt='Random&nbsp;' width='600' height='400'>";
       }
       ?>
 </body>

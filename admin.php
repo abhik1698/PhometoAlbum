@@ -7,7 +7,7 @@
 </form>
 
 <form method="post" enctype="multipart/form-data">
-    <h2>Which Key value to upload?</h2>
+    <h2>Album's Key value to upload?</h2>
     <input type="text" name="key" placeholder="Enter key">
     <h2>Select image to upload:</h2>
     <input type="file" name="fileToUpload" id="fileToUpload">
