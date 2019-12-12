@@ -12,9 +12,9 @@
       <form  class="form-group" method="post" enctype="multipart/form-data">
          <h2>Album's Key value to upload?</h2>
          <input class="form-control-lg form-control" type="text" name="key" placeholder="Set KEY value" required>
-         <h2>Select image to upload:</h2>
+         <h2>Select images to upload:</h2>
          <input name="upload[]" type="file" multiple="multiple" class="form-control-file btn btn-danger" required/>
-         </br><input type="submit" class="btn btn-success" value="Upload Image" name="submit">
+         </br><input type="submit" class="btn btn-warning" value="Upload Images" name="submit">
       </form>
    </body>
 </html>
