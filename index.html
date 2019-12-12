@@ -1,14 +1,19 @@
 <html>
-  <head></head>
-  <body>
-    <form method="post" action="album.php">  
-      <input name="key" type="text" placeholder="Enter Key" required>
-      <input name='submit' type="submit">
-    </form>  
-    
-    <form action="admin.php">
-    <input type="submit" value="Admin Login">  
-
-    </form>
-  </body>
+   <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   </head>
+   <body style="background-color: #1F2739;padding: 5%;color: white;" class="container">
+      <center>
+         <h1>PHOMETO Albums</h1>
+         <form method="post" action="album.php">  
+            <input class="form-control form-control-lg" name="key" type="text" placeholder="Enter Your Album Key" required>
+            </br><input name='submit' class="btn btn-primary" type="submit">
+         </form>
+         <form action="admin.php">
+            <input class="btn btn-danger" type="submit" value="Admin Login">  
+      </center>
+      </form>
+   </body>
 </html>
