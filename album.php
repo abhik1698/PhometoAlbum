@@ -13,19 +13,24 @@
          </form>
          <?php 
             $key = trim($_POST['key']);
-            // header('Content-type: albums/jpeg');
-            // Pull images
-            $files = glob("Albums/$key/*.*");      
-            echo '<div class="row">';
-            for ($i=0; $i<count($files); $i++) {
-              $image = $files[$i];
-              
-              echo '<div class="col-md-4 "><div class="thumbnail">
-                    <a href="'.$image.'" target="blank">
-                    <img src="'.$image.'" alt="'.$image.'" style="width:100%">
-                    <div class="caption">'.$image.'</div></div></div>';
+            if(!is_dir("Albums/".$key."/")) {
+               echo "<h1 style='color: white;'>No such Album</h1>";
+             }
+            else{
+               // Pull images
+               $files = glob("Albums/$key/*.*");      
+               echo '<div class="row">';
+               for ($i=0; $i<count($files); $i++) {
+               $image = $files[$i];
+               
+               echo '<div class="col-md-4 "><div class="thumbnail">
+                     <a href="'.$image.'" target="blank">
+                     <img src="'.$image.'" alt="'.$image.'" style="width:100%">
+                     <div class="caption">'.$image.'</div></div></div>';
+               }
+               echo '</div>';
             }
-            echo '</div>';
+            
             ?>
       </div>
    </body>
