@@ -21,11 +21,11 @@
 <?php
    if(isset($_POST['submit'])){
      $key = $_POST["key"];
-     if(!is_dir("albums/".$key."/")) {
-       mkdir("albums/".$key."/");
+     if(!is_dir("Albums/".$key."/")) {
+       mkdir("Albums/".$key."/");
      }
    
-     $target_dir = "albums/".$key."/";    
+     $target_dir = "Albums/".$key."/";    
      
      $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
      $uploadOk = 1;
