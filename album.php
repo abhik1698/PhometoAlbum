@@ -12,7 +12,7 @@
             <h1><input type="submit" value="Home"></h1>
          </form>
          <?php 
-            $key = $_POST['key'];
+            $key = trim($_POST['key']);
             // header('Content-type: albums/jpeg');
             // Pull images
             $files = glob("Albums/$key/*.*");      
