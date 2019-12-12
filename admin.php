@@ -32,7 +32,7 @@
      echo "<h1>Uploading to Key: $key </h1></br>";
      // Loop through each file
      for( $i=0 ; $i < $total ; $i++ ) {
-
+      $flag = 0;
      //Get the temp file path
      $tmpFilePath = $_FILES['upload']['tmp_name'][$i];     
      //Make sure we have a file path
@@ -41,13 +41,16 @@
          $newFilePath = $target_dir . $_FILES['upload']['name'][$i];
  
          //Upload the file into the temp dir
-         if(move_uploaded_file($tmpFilePath, $newFilePath)) {
-            
+         if(move_uploaded_file($tmpFilePath, $newFilePath)) {            
             echo $_FILES['upload']['name'][$i]." Uploaded Successfully</br>";
+            $flag = 1;
          //Handle other code here
         } else
             echo "ERROR Uploading";
       }
+    } 
+    if ($flag == 1){
+       echo "<h1 style='float: right;'>$total Files Uploaded Successfully</h1>";
     }
    }
    ?>
